@@ -1,4 +1,4 @@
-
+/* ... existing CSS ... */
 
 .container {
     display: flex;
@@ -9,13 +9,13 @@
 
 .section {
     flex: 1;
-    min-width: 300px; 
+    min-width: 300px; /* Adjust as needed */
     border: 1px solid black;
     padding: 20px;
     margin: 10px;
     background-color: #e0e0e0;
     position: relative;
-    text-align: center; 
+    text-align: center; /* Center text within sections */
 }
 
 .title {
@@ -24,26 +24,26 @@
     right: 10px;
     background-color: #c0c0c0;
     padding: 5px;
-    color: #fff; 
+    color: #fff; /* Set text color to white */
 }
 
 @media (min-width: 992px) {
     .section {
         flex: 1 0 33.33%;
-        min-width: 300px; 
+        min-width: 300px; /* Adjust as needed */
     }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
     .section {
         flex: 1 0 50%;
-        min-width: 300px; 
+        min-width: 300px; /* Adjust as needed */
     }
 }
 
 @media (max-width: 767px) {
     .section {
         flex: 1 0 100%;
-        min-width: 300px; 
+        min-width: 300px; /* Adjust as needed */
     }
 }

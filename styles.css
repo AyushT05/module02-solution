@@ -1,4 +1,4 @@
-* {
+ {
     box-sizing: border-box; 
     margin: 0; 
     padding: 0; 
@@ -23,7 +23,7 @@ body {
     position: relative; 
 }
 
-/* Section title styles */
+
 .title {
     position: absolute; 
     top: 10px; 

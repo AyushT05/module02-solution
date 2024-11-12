@@ -1,49 +1,106 @@
-/* ... existing CSS ... */
+* {
+    box-sizing: border-box; /* Ensures padding and borders are included in width/height */
+    margin: 0; /* Resets default margins */
+    padding: 0; /* Resets default padding */
+    font-family: "Outfit", serif;
+
+}
+
+body {
+    font-family: Arial, sans-serif; /* Sets a default font */
+     /* Light background for contrast */
+}
 
 .container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 10px;
+    display: flex; /* Enables flexbox layout */
+    flex-wrap: wrap; /* Allows items to wrap onto new lines */
+    margin: 10px; /* Adds margin around the container */
 }
 
 .section {
-    flex: 1;
-    min-width: 300px; /* Adjust as needed */
-    border: 1px solid black;
-    padding: 20px;
-    margin: 10px;
-    background-color: #e0e0e0;
-    position: relative;
-    text-align: center; /* Center text within sections */
+    border: 3px solid black; /* Black border around each section */
+    padding: 20px; /* Padding inside each section */
+    margin: 10px; /* Margin between sections */
+    position: relative; /* Needed for absolute positioning of titles */
+    background-color: #856363;
 }
 
+
+/* Section title styles with specific backgrounds */
+#chicken .title {
+    background-color: lightgray; /* Light gray background for Chicken title box */
+}
+
+#beef .title {
+    background-color: #ff3333; /* Red background for Beef title box */
+}
+
+#sushi .title {
+    background-color: #ffff4d; /* Yellow background for Sushi title box */
+}
+
+/* Title text color adjustments if needed (optional) */
 .title {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #c0c0c0;
-    padding: 5px;
-    color: #fff; /* Set text color to white */
+    position: absolute; /* Positions title absolutely within the section */
+    top: 0px; /* Distance from the top of the section */
+    right: 0px; /* Distance from the right of the section */
+    padding: 5px; /* Padding around title text */
+    border: 3px solid black;
+    border-right: 0px;
+    border-top: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
+/* Desktop view (992px and above) */
 @media (min-width: 992px) {
     .section {
-        flex: 1 0 33.33%;
-        min-width: 300px; /* Adjust as needed */
+        width: calc(33.33% - 20px); /* Each section takes up one-third of the row minus margins */
     }
 }
 
+/* Tablet view (768px to 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
     .section {
-        flex: 1 0 50%;
-        min-width: 300px; /* Adjust as needed */
+        width: calc(50% - 20px); /* First two sections take half width each */
+    }
+    
+    #sushi { 
+        width: calc(100% - 20px); /* Third section takes full width on a new row */
+        margin-top: 10px; /* Adds space above the third section */
     }
 }
 
+/* Mobile view (767px and below) */
 @media (max-width: 767px) {
     .section {
-        flex: 1 0 100%;
-        min-width: 300px; /* Adjust as needed */
+        width: calc(100% - 20px); /* Each section takes full width on mobile */
+        margin-top: 10px; /* Space between sections on mobile view */
     }
+}
+
+/* Tablet view (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        width: calc(50% - 20px); /* First two sections take half width each */
+    }
+    
+    #sushi { 
+        width: calc(100% - 20px); /* Third section takes full width on a new row */
+        margin-top: 10px; /* Adds space above the third section */
+    }
+}
+
+/* Mobile view (767px and below) */
+@media (max-width: 767px) {
+    .section {
+        width: calc(100% - 20px); /* Each section takes full width on mobile */
+        margin-top: 10px; /* Space between sections on mobile view */
+    }
+}
+
+p
+{
+    margin-top: 14px;
+
 }

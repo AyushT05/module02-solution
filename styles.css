@@ -1,50 +1,50 @@
 * {
-    box-sizing: border-box; /* Ensures padding and borders are included in width/height */
-    margin: 0; /* Resets default margins */
-    padding: 0; /* Resets default padding */
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
     font-family: "Outfit", serif;
 
 }
 
 body {
-    font-family: Arial, sans-serif; /* Sets a default font */
-     /* Light background for contrast */
+    font-family: Arial, sans-serif; 
+     
 }
 
 .container {
-    display: flex; /* Enables flexbox layout */
-    flex-wrap: wrap; /* Allows items to wrap onto new lines */
-    margin: 10px; /* Adds margin around the container */
+    display: flex; 
+    flex-wrap: wrap; 
+    margin: 10px; 
 }
 
 .section {
-    border: 3px solid black; /* Black border around each section */
-    padding: 20px; /* Padding inside each section */
-    margin: 10px; /* Margin between sections */
-    position: relative; /* Needed for absolute positioning of titles */
+    border: 3px solid black; 
+    padding: 20px; 
+    margin: 10px; 
+    position: relative; 
     background-color: #856363;
 }
 
 
-/* Section title styles with specific backgrounds */
+
 #chicken .title {
-    background-color: lightgray; /* Light gray background for Chicken title box */
+    background-color: lightgray; 
 }
 
 #beef .title {
-    background-color: #ff3333; /* Red background for Beef title box */
+    background-color: #ff3333; 
 }
 
 #sushi .title {
-    background-color: #ffff4d; /* Yellow background for Sushi title box */
+    background-color: #ffff4d; 
 }
 
-/* Title text color adjustments if needed (optional) */
+
 .title {
-    position: absolute; /* Positions title absolutely within the section */
-    top: 0px; /* Distance from the top of the section */
-    right: 0px; /* Distance from the right of the section */
-    padding: 5px; /* Padding around title text */
+    position: absolute; 
+    top: 0px; 
+    right: 0px; 
+    padding: 5px; 
     border: 3px solid black;
     border-right: 0px;
     border-top: 0px;
@@ -52,50 +52,49 @@ body {
     padding-right: 5px;
 }
 
-/* Desktop view (992px and above) */
+
 @media (min-width: 992px) {
     .section {
-        width: calc(33.33% - 20px); /* Each section takes up one-third of the row minus margins */
+        width: calc(33.33% - 20px); 
     }
 }
 
-/* Tablet view (768px to 991px) */
+
 @media (min-width: 768px) and (max-width: 991px) {
     .section {
-        width: calc(50% - 20px); /* First two sections take half width each */
+        width: calc(50% - 20px); 
     }
     
     #sushi { 
-        width: calc(100% - 20px); /* Third section takes full width on a new row */
-        margin-top: 10px; /* Adds space above the third section */
+        width: calc(100% - 20px); 
+        margin-top: 10px; 
     }
 }
 
-/* Mobile view (767px and below) */
+
 @media (max-width: 767px) {
     .section {
-        width: calc(100% - 20px); /* Each section takes full width on mobile */
-        margin-top: 10px; /* Space between sections on mobile view */
+        width: calc(100% - 20px); 
+        margin-top: 10px; 
     }
 }
 
-/* Tablet view (768px to 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
     .section {
-        width: calc(50% - 20px); /* First two sections take half width each */
+        width: calc(50% - 20px); 
     }
     
     #sushi { 
-        width: calc(100% - 20px); /* Third section takes full width on a new row */
-        margin-top: 10px; /* Adds space above the third section */
+        width: calc(100% - 20px); 
+        margin-top: 10px; 
     }
 }
 
-/* Mobile view (767px and below) */
+
 @media (max-width: 767px) {
     .section {
-        width: calc(100% - 20px); /* Each section takes full width on mobile */
-        margin-top: 10px; /* Space between sections on mobile view */
+        width: calc(100% - 20px); 
+        margin-top: 10px; 
     }
 }
 
@@ -103,4 +102,9 @@ p
 {
     margin-top: 14px;
 
+}
+
+h1
+{
+    text-align: center;
 }

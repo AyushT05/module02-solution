@@ -1,1 +1,52 @@
+* {
+    box-sizing: border-box;
+}
 
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 10px;
+}
+
+.title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: lightgrey; /* Change as needed */
+}
+
+/* Desktop view */
+@media (min-width: 992px) {
+    .section {
+        width: calc(33.33% - 20px); /* Adjust for margins */
+        position: relative; /* Needed for absolute positioning of title */
+    }
+}
+
+/* Tablet view */
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        width: calc(50% - 20px); /* Two sections in one row */
+    }
+    
+    #sushi {
+        width: 100%; /* Full width for third section */
+    }
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+    .section {
+        width: 100%; /* Each section takes full width */
+    }
+}
